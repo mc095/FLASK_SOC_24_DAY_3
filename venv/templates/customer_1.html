@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='styles2.css') }}">
+    <title>Customer Registration Form</title>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Customer Registration</h2>
+        <form action="/customer_form" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contact">Contact</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="pin">PIN</label>
+            <input type="password" id="pin" name="pin" required>
+
+            <div class="form-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

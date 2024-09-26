@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="text-align: center">
+
+    <div class="container text-center" style="padding-top: 5%;">
+        <h1>Flask and SQLite Student Management</h1>
+        <hr />
+  
+        <div class="btn-group mb-4" role="group">
+          <a href="{{ url_for('main') }}" class="btn btn-primary">Home</a>
+        </div>
+  
+        <div class="btn-group mb-4" role="group">
+          <a href="{{ url_for('report') }}" class="btn btn-primary">View Student Details</a>
+        </div>
+
+    <div class="container" style="padding-top: 2%">
+      <table class="table table-striped table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Registration Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Branch</th>
+            <th scope="col">GPA in Web Technologies</th>
+            <th scope="col">GPA in Operating Systems</th>
+            <th scope="col">GPA in Data Mining</th>
+            <th scope="col">GPA in Artificial Intelligence</th>
+            <th scope="col">GPA in Machine Learning</th>
+            <th scope="col">GPA in AWS</th>
+            <th scope="col">Average GPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in students %}
+          <tr>
+            <td>{{ student.rollno }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.branch }}</td>
+            <td>{{ student.wt }}</td>
+            <td>{{ student.os }}</td>
+            <td>{{ student.dm }}</td>
+            <td>{{ student.ai }}</td>
+            <td>{{ student.ml }}</td>
+            <td>{{ student.aws }}</td>
+            <td>{{ student.avg_gpa }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

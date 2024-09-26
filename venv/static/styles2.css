@@ -1,0 +1,80 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f4f4f4; /* Light gray background for the entire page */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure full height on larger screens */
+}
+
+.form-container {
+  background-color: white; /* White background for the form container */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 100%;
+  max-width: 800px; /* Max width to keep form from stretching too wide */
+  margin: 10px; /* Add some margin for small screens */
+}
+
+h2 {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px;
+  color: #333; /* Dark gray text color */
+}
+
+label {
+  display: block; /* Block display for labels */
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Dark gray text color */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: calc(100% - 20px); /* Full width for input fields */
+  padding: 10px; /* Increased padding for comfort */
+  margin-bottom: 15px; /* Space between fields */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft inner shadow */
+  font-size: 16px; /* Set font size */
+}
+
+select {
+  width: calc(100% - 20px); /* Ensure same width as other fields */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Remove default dropdown styling */
+  background-color: white; /* Background color for dropdown */
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between; /* Space buttons apart */
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 15px; /* Padding for buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  color: white; /* White text color */
+  width: 48%; /* Width for buttons to fit in the container */
+  background-color: #007bff; /* Blue background for buttons */
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  opacity: 0.9; /* Slightly transparent effect */
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+  transform: scale(0.98); /* Slight scaling effect when clicked */
+}

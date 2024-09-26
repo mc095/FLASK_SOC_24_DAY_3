@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='styles2.css') }}">
+    <title>Customer Registration Form</title>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Customer Registration</h2>
+        <form action="/student_form" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Registration Number</label>
+            <input type="text" id="regno" name="regno" required>
+
+            <label for="contact">Branch</label>
+            <select id="branch" name="branch" required>
+                <option value="CSE-A">CSE-A</option>
+                <option value="CSE-B">CSE-B</option>
+                <option value="CSE-C">CSE-C</option>
+                <option value="CSE-D">CSE-D</option>
+              </select>
+
+            <label for="pin">GPA in Web Technologies</label>
+            <input type="decimal" id="wt" name="wt" required>
+
+            <label for="pin">GPA in Operating Systems</label>
+            <input type="decimal" id="os" name="os" required>
+
+            <label for="pin">GPA in Data Mining</label>
+            <input type="decimal" id="dm" name="dm" required>
+
+            <label for="pin">GPA in Artificial Intelligence</label>
+            <input type="decimal" id="ai" name="ai" required>
+
+            <label for="pin">GPA in Machine Learning</label>
+            <input type="decimal" id="ai" name="ai" required>
+
+            <label for="pin">GPA in Artificial Intelligence</label>
+            <input type="decimal" id="ai" name="ai" required>
+            
+            <div class="form-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
